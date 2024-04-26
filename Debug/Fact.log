@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+C:\Users\contest.W12-416-009.000.001\source\repos\Fact\MyForm.cpp(1,9): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Fact.vcxproj -> C:\Users\contest.W12-416-009.000.001\source\repos\Fact\Debug\Fact.exe

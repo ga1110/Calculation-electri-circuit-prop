@@ -1,0 +1,4 @@
+F:\Study\Electro chain\x64\Debug\Fact.vcxproj.AssemblyReference.cache
+F:\Study\Electro chain\x64\Debug\Fact.vcxproj.GenerateResource.cache
+F:\Study\Electro chain\x64\Debug\Electro chain.MyForm.resources
+F:\Study\Electro chain\x64\Debug\Electro chain.exe

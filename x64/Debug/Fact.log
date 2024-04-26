@@ -1,0 +1,28 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Fact.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  MyForm.cpp
+F:\Study\Electro chain\Elec.h(38,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\Elec.h(38,46): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(639,54): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(639,45): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(708,83): warning C4305: аргумент: усечение из "int" в "bool"
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(711,55): warning C4305: аргумент: усечение из "int" в "bool"
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(954,113): warning C4101: current1011: неиспользованная локальная переменная
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\Electro chain\MyForm.h(954,66): warning C4101: current45: неиспользованная локальная переменная
+  (компиляция исходного файла "MyForm.cpp")
+  
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Fact.vcxproj -> F:\Study\Electro chain\x64\Debug\Electro chain.exe
