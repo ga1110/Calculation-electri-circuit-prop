@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33130.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///f:/study/github/calculation-of-electric-circuit-prop/myform.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "877a6d2a0679da45006166f150108f91f4fad0ccaed88302f65b637f9fb52b96"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/study/github/calculation-of-electric-circuit-prop/myform.h"
+          },
+          "hashes": {
+            "sha-256": "14e4c06726f478552b57127515f1d24beff80221e593c17457633a811ed17c51"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/study/github/calculation-of-electric-circuit-prop/elec.h"
+          },
+          "hashes": {
+            "sha-256": "e5cde79d0463c37ceede835e841e66ec607348cfffcc6c91dfecb7866fd59c6d"
+          }
+        }
+      ]
+    }
+  ]
+}

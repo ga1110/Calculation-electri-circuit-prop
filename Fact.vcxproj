@@ -127,28 +127,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Elec.h" />
+    <ClInclude Include="Input_form.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="EDS.png" />
-    <Image Include="Electric device0.png" />
-    <Image Include="Electric device1.png" />
-    <Image Include="Key0.png" />
-    <Image Include="Key1.png" />
-    <Image Include="Lamp0.png" />
-    <Image Include="Lamp1.png" />
-    <Image Include="Line.png" />
-    <Image Include="Razdel.png" />
-    <Image Include="Razdelm.png" />
-    <Image Include="RazdelmR.png" />
-    <Image Include="Resistor.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

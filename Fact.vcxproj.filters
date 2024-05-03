@@ -26,43 +26,11 @@
     <ClInclude Include="Elec.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="EDS.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Line.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Razdel.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Razdelm.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="RazdelmR.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Resistor.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Key0.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Key1.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Lamp0.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Lamp1.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Electric device0.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="Electric device1.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
+    <ClInclude Include="Tree.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Input_form.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

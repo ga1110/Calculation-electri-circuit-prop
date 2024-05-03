@@ -1,0 +1,131 @@
+  Electric circuit.MyForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Electric circuit, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class E_elem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Double, Double, Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Get_Name(): PrivateScope, Public, HideBySig
+    Get_Res(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Get_Vol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Get_Cur(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_res(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_vol(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_cur(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_work(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_work(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_info(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class EDS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :E_elem
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 eds_count : Public, Static
+  Methods:
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
+Class Resistor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :E_elem
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 res_count : Public, Static
+  Methods:
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
+Class Electric_device: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :E_elem
+    Void .ctor(Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ed_count : Public, Static
+  Methods:
+    get_info(): PrivateScope, Public, Virtual, HideBySig
+    get_work(): PrivateScope, Public, Virtual, HideBySig
+    set_res(Double): PrivateScope, Public, Virtual, HideBySig
+    set_vol(Double): PrivateScope, Public, Virtual, HideBySig
+    set_cur(Double): PrivateScope, Public, Virtual, HideBySig
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
+Class Lamp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :E_elem
+    Void .ctor(Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 lamp_count : Public, Static
+  Methods:
+    get_info(): PrivateScope, Public, Virtual, HideBySig
+    get_work(): PrivateScope, Public, Virtual, HideBySig
+    set_res(Double): PrivateScope, Public, Virtual, HideBySig
+    set_vol(Double): PrivateScope, Public, Virtual, HideBySig
+    set_cur(Double): PrivateScope, Public, Virtual, HideBySig
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
+Class Key: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :E_elem
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 key_count : Public, Static
+  Methods:
+    get_work(): PrivateScope, Public, Virtual, HideBySig
+    set_work(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig
+    set_cur(Double): PrivateScope, Public, Virtual, HideBySig
+    set_res(Double): PrivateScope, Public, Virtual, HideBySig
+    get_info(): PrivateScope, Public, Virtual, HideBySig
+    to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
+Class Scheme_tree: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(E_elem, Single, System.Drawing.Graphics): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Scheme_tree, E_elem, Boolean, System.ValueType, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 split_count : Public, Static
+    System.Drawing.Pen pen : Public, Static
+    System.Drawing.Graphics g : Public, Static
+    Scheme_tree root : Public, Static
+    System.Drawing.Pen arrow_pen : Public, Static
+  Methods:
+    set_node(Scheme_tree, E_elem): PrivateScope, Public, HideBySig
+    get_parent(): PrivateScope, Public, HideBySig
+    get_top(): PrivateScope, Public, HideBySig
+    get_straight(): PrivateScope, Public, HideBySig
+    get_bottom(): PrivateScope, Public, HideBySig
+    get_element(): PrivateScope, Public, HideBySig
+    get_point(): PrivateScope, Public, HideBySig
+    get_count(): PrivateScope, Public, HideBySig
+    get_height(): PrivateScope, Public, HideBySig
+    is_leaf(): PrivateScope, Public, HideBySig
+    paint(): PrivateScope, Public, HideBySig
+    set_g(Graphics): PrivateScope, Public, HideBySig
+    paint_split(): PrivateScope, Public, HideBySig
+    draw_arrow(): PrivateScope, Public, HideBySig
+    all_paint(): PrivateScope, Public, HideBySig
+    all_paint_help(Scheme_tree, Single): PrivateScope, Public, HideBySig
+    list_nodes(Scheme_tree): PrivateScope, Public, HideBySig
+    list_leafs(Scheme_tree): PrivateScope, Public, HideBySig
+    get_all_res(): PrivateScope, Public, HideBySig
+    get_all_res_help(Scheme_tree, Single&): PrivateScope, Public, HideBySig
+    parallel_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
+    straight_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
+Class InputForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox textBox1 : Public
+    System.Windows.Forms.TextBox textBox2 : Public
+    System.Windows.Forms.Label label1 : Public
+    System.Windows.Forms.Label label2 : Public
+Class Fact.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Scheme_tree root : Public
+    System.Drawing.Graphics g : Public
+    System.Collections.Generic.List`1[Scheme_tree] list_nodes : Public
+    System.Collections.Generic.List`1[Scheme_tree] list_leafs : Public

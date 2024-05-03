@@ -1,5 +1,7 @@
 #include "MyForm.h"
 #include "Elec.h"
+#include "Tree.h"
+#include <array>
 using namespace System;
 using namespace System::Windows::Forms;
 
