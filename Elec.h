@@ -1,5 +1,6 @@
 #pragma once
 #include <cliext/list>
+#include "Input_form.h"
 using namespace System::Collections::Generic;
 using namespace cliext;
 using namespace System;
@@ -99,12 +100,45 @@ public ref class EDS : E_elem
 {
 public:
 	static int eds_count = 0;
-	EDS(double res, double cur) :E_elem(res, 0, cur, 1)
+	EDS() :E_elem(5, 0, 15, 1)
 	{
-		name = "EDS" + eds_count.ToString();
-		resistance = res;
-		current = cur;
+
+
+		name = "EDS_" + eds_count.ToString();
 		eds_count += 1;
+
+		double res; // Переменные для хранения данных из текст бокса
+		double cur; //
+
+		InputFormEDS^ inputForm = gcnew InputFormEDS(name);
+		bool validInput = false;
+		while (!validInput)
+		{
+			if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			{
+				// Проверяем, являются ли введенные значения числами
+				double resistance, voltage;
+				if (Double::TryParse(inputForm->res_textbox->Text, res) && Double::TryParse(inputForm->cur_textbox->Text, cur))
+				{
+					validInput = true;
+					resistance = res;
+					current = cur;
+				}
+				else if (inputForm->cur_textbox->Text == "" || inputForm->res_textbox->Text == "")
+				{
+					break;
+				}
+				else
+				{
+					MessageBox::Show("Пожалуйста, введите числовые значения для сопротивления и напряжения.");
+				}
+			}
+			else
+			{
+				// Пользователь нажал кнопку "Отмена" или закрыл диалоговое окно
+				break;
+			}
+		}
 	}
 	void to_paint(Graphics^ g, Point^ point) override
 	{
@@ -127,12 +161,40 @@ public ref class Resistor : E_elem
 protected:
 public:
 	static int res_count = 0;
-	Resistor(double res) :E_elem(res, 0, 0, 1)
+	Resistor() :E_elem(6, 0, 0, 1)
 	{
-		name = "Resistor" + res_count.ToString();
-		resistance = res;
+		name = "Resistor_" + res_count.ToString();
+
 		res_count += 1;
- 
+
+		double res; // Переменные для хранения данных из текст бокса
+
+		InputFormBaselement^ inputForm = gcnew InputFormBaselement(name);
+		bool validInput = false;
+		while (!validInput)
+		{
+			if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			{
+				if (Double::TryParse(inputForm->res_textbox->Text, res))
+				{
+					validInput = true;
+					resistance = res;
+				}
+				else if (inputForm->res_textbox->Text == "")
+				{
+					break;
+				}
+				else
+				{
+					MessageBox::Show("Пожалуйста, введите числовые значения для сопротивления.");
+				}
+			}
+			else
+			{
+				// Пользователь нажал кнопку "Отмена" или закрыл диалоговое окно
+				break;
+			}
+		}
 	}
 
 	void to_paint(Graphics^ g, Point^ point) override
@@ -163,12 +225,40 @@ public ref class Electric_device : E_elem
 protected:
 public:
 	static int ed_count = 0;
-	Electric_device(double res, bool w) :E_elem(res, 0, 0, w)
+	Electric_device() :E_elem(7, 0, 0, true)
 	{
-		name = "E_dev" + ed_count.ToString();
-		resistance = res;
-		isWork = w;
+		name = "E-dev_" + ed_count.ToString();
 		ed_count += 1;
+
+		double res; // Переменные для хранения данных из текст бокса
+
+		InputFormBaselement^ inputForm = gcnew InputFormBaselement(name);
+		bool validInput = false;
+		while (!validInput)
+		{
+			if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			{
+				if (Double::TryParse(inputForm->res_textbox->Text, res))
+				{
+					validInput = true;
+					resistance = res;
+				}
+				else if (inputForm->res_textbox->Text == "")
+				{
+					break;
+				}
+				else
+				{
+					MessageBox::Show("Пожалуйста, введите числовые значения для сопротивления.");
+				}
+			}
+			else
+			{
+				// Пользователь нажал кнопку "Отмена" или закрыл диалоговое окно
+				break;
+			}
+		}
+		
 	}
 	String^ get_info() override
 	{
@@ -228,12 +318,40 @@ public ref class Lamp : E_elem
 protected:
 public:
 	static int lamp_count = 0;
-	Lamp(double res, bool w) :E_elem(res, 0, 0, w)
+	Lamp() :E_elem(3, 0, 0, true)
 	{
 		name = "Lamp" + lamp_count.ToString();
-		resistance = res;
-		isWork = w;
 		lamp_count += 1;
+
+		double res; // Переменные для хранения данных из текст бокса
+
+		InputFormBaselement^ inputForm = gcnew InputFormBaselement(name);
+		bool validInput = false;
+		while (!validInput)
+		{
+			if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			{
+				if (Double::TryParse(inputForm->res_textbox->Text, res))
+				{
+					validInput = true;
+					resistance = res;
+				}
+				else if (inputForm->res_textbox->Text == "")
+				{
+					break;
+				}
+				else
+				{
+					MessageBox::Show("Пожалуйста, введите числовые значения для сопротивления.");
+				}
+			}
+			else
+			{
+				// Пользователь нажал кнопку "Отмена" или закрыл диалоговое окно
+				break;
+			}
+		}
+		
 	}
 	String^ get_info() override
 	{
@@ -299,10 +417,14 @@ protected:
 	bool isWork;
 public:
 	static int key_count = 0;
-	Key(bool w) :E_elem(0, 0, 0, w)
+	Key() :E_elem(0, 0, 0, 1)
 	{
 		name = "Key" + key_count.ToString();
-		isWork = w;
+		InputFormKey^ inputForm = gcnew InputFormKey(name);
+		if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		{
+			isWork = !inputForm->check_work->Checked;
+		}
 		key_count += 1;
  
 	}

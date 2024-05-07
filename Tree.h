@@ -54,13 +54,13 @@ public:
 		{
 			node->straight = nullptr;
 			split_count += 1;
-			all_paint();
+			all_paint(g);
 		}
 		else
 		{
 			node->top = nullptr;
 			node->bottom = nullptr;
-			all_paint();
+			all_paint(g);
 		}
 		this->paint_split();
 		this->top = gcnew Scheme_tree(this, element, true, gcnew Point(this->point->X + 100, (this->point->Y-20)), abs(this->height) + 1);
@@ -150,10 +150,10 @@ public:
 		g->DrawLine(arrow_pen, start_x, start_y, start_x + 10, start_y + param2);
 	}
 
-	void all_paint()
+	void all_paint(Graphics^ tmp_g)
 	{
+		g = tmp_g;
 		Scheme_tree^ tmp_root = root;
-		g->Clear(Color::Aquamarine);
 		all_paint_help(tmp_root, 0);
 
 	}

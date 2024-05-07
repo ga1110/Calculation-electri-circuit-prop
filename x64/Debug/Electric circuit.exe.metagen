@@ -16,6 +16,27 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
 	hash=None, flags=None
+Class InputForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox res_textbox : Public
+    System.Windows.Forms.TextBox cur_textbox : Public
+    System.Windows.Forms.Label res_label : Public
+    System.Windows.Forms.Label cur_label : Public
+    System.Windows.Forms.Label name_label : Public
+    System.Windows.Forms.Button okButton : Public
+Class InputFormEDS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :InputForm
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class InputFormBaselement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :InputForm
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class InputFormKey: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :InputForm
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.CheckBox check_work : Public
 Class E_elem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Double, Double, Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -33,21 +54,21 @@ Class E_elem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
 Class EDS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :E_elem
-    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 eds_count : Public, Static
   Methods:
     to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
 Class Resistor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :E_elem
-    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 res_count : Public, Static
   Methods:
     to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
 Class Electric_device: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :E_elem
-    Void .ctor(Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 ed_count : Public, Static
   Methods:
@@ -59,7 +80,7 @@ Class Electric_device: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
 Class Lamp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :E_elem
-    Void .ctor(Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 lamp_count : Public, Static
   Methods:
@@ -71,7 +92,7 @@ Class Lamp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     to_paint(Graphics, ValueType Point IsBoxed): PrivateScope, Public, Virtual, HideBySig
 Class Key: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :E_elem
-    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 key_count : Public, Static
   Methods:
@@ -105,7 +126,7 @@ Class Scheme_tree: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     set_g(Graphics): PrivateScope, Public, HideBySig
     paint_split(): PrivateScope, Public, HideBySig
     draw_arrow(): PrivateScope, Public, HideBySig
-    all_paint(): PrivateScope, Public, HideBySig
+    all_paint(Graphics): PrivateScope, Public, HideBySig
     all_paint_help(Scheme_tree, Single): PrivateScope, Public, HideBySig
     list_nodes(Scheme_tree): PrivateScope, Public, HideBySig
     list_leafs(Scheme_tree): PrivateScope, Public, HideBySig
@@ -113,14 +134,6 @@ Class Scheme_tree: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     get_all_res_help(Scheme_tree, Single&): PrivateScope, Public, HideBySig
     parallel_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
     straight_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
-Class InputForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.Windows.Forms.TextBox textBox1 : Public
-    System.Windows.Forms.TextBox textBox2 : Public
-    System.Windows.Forms.Label label1 : Public
-    System.Windows.Forms.Label label2 : Public
 Class Fact.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -129,3 +142,4 @@ Class Fact.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Drawing.Graphics g : Public
     System.Collections.Generic.List`1[Scheme_tree] list_nodes : Public
     System.Collections.Generic.List`1[Scheme_tree] list_leafs : Public
+    Boolean init_load : Public

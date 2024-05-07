@@ -35,6 +35,7 @@ namespace Fact {
 		Graphics^ g;
 		List<Scheme_tree^>^ list_nodes;
 		List<Scheme_tree^>^ list_leafs;
+		bool init_load = true;
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -78,61 +79,39 @@ namespace Fact {
 			this->Resize += gcnew System::EventHandler(this, &MyForm::MyForm_Resize);
 			this->ResumeLayout(false);
 		}
-
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 	{
-		
+		//InputFormKey^ inputFormKey = gcnew InputFormKey("ключ");
+		//inputFormKey->ShowDialog();
+
+		//InputFormEDS^ inputFormEDS = gcnew InputFormEDS("эдс");
+		//inputFormEDS->ShowDialog();
+
+		//InputFormBaselement^ inputFormKeyBE = gcnew InputFormBaselement("резистор");
+		//inputFormKeyBE->ShowDialog();
+
+
+		//if (inputForm->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		//{
+		//	// Здесь вы можете получить доступ к значениям в текстовых полях
+		//	String^ resistance = inputForm->res_textbox->Text;
+		//	String^ voltage = inputForm->cur_textbox->Text;
+		//	// Используйте значения resistance и voltage
+		//}
 	}
 	private: System::Void MyForm_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) 
 	{
-		InputForm^ form = gcnew InputForm();
-		if (form->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-		{
-			String^ text1 = form->textBox1->Text;
-			String^ text2 = form->textBox2->Text;
-			// Используйте text1 и text2
-		}
 		g = e->Graphics;
 		g->Clear(Color::Aquamarine);
-		EDS^ Eds0 = gcnew EDS(5, 0);
-		Resistor^ Resistor0 = gcnew Resistor(3);
-		Resistor^ Resistor01 = gcnew Resistor(4);
-		Electric_device^ Ed0 = gcnew Electric_device(6, 1);
-		Key^ key0 = gcnew Key(1);
-		Lamp^ lamp0 = gcnew Lamp(7, 1);
-		Lamp^ lamp1 = gcnew Lamp(2, 1);
+		if(init_load) { create_init(e); }
+		root->all_paint(g);
+	}
+	void create_init(System::Windows::Forms::PaintEventArgs^ e)
+	{
+		EDS^ Eds0 = gcnew EDS();
 		root = gcnew Scheme_tree(Eds0, this->ClientRectangle.Height / 2, g);
-		
-
-		Scheme_tree^ tmp1 = root->get_top();
-		tmp1 = tmp1->set_node(root, lamp0);
-
-		Scheme_tree^ tmp2 = root->get_bottom();
-		tmp2 = tmp2->set_node(root, Resistor0);
-
-		Scheme_tree^ tmp3 = tmp2->get_straight();
-		tmp3 = tmp3->set_node(tmp2, lamp1);
-
-		Scheme_tree^ tmp4 = tmp3->get_top();
-		tmp4 = tmp4->set_node(tmp3, lamp1);
-
-		Scheme_tree^ tmp5 = tmp3->get_bottom();
-		tmp5 = tmp5->set_node(tmp3, lamp1);
-
-		//
-		//float my_result = root->get_all_res();
-		////Цикл по всем элементам (надпись + рисунок)
-
-		//float a = root->get_element()->Get_Res();
-		//float b = tmp1->get_element()->Get_Res();
-		//float c = tmp2->get_element()->Get_Res();
-		//float d = tmp3->get_element()->Get_Res();
-		//d += 1 / (1/tmp4->get_element()->Get_Res() + 1/tmp5->get_element()->Get_Res());
-		//float result = a + 1/(1/b + 1/(c+d));
-		//MessageBox::Show("Моё - " + my_result.ToString() + "\n" +
-		//"Настоящий - " + result);
-		
+		init_load = false; 
 	}
     void draw_arrow()
 	{
@@ -143,16 +122,3 @@ namespace Fact {
 	}
 	};
 }
-
-/*
-TODO:
-1) Отрисовка относительно начальной координаты
-2) Дорисовка отсутствубщих элементов (линии)
-3) Перерисовка когда добавляется разделение
-4) Элементы управления экраном 
-5) Переключение места отрисовка и стрелка указывающаю на текущее местоположение
-6) При выборе места выпадающий список с возможными элементами 
-7) Структура для подсчета 
-
-Отрисвока должна быть относительно оструктуры.
-*/
