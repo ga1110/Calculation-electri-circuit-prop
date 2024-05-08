@@ -126,6 +126,7 @@
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Change_form.h" />
     <ClInclude Include="Elec.h" />
     <ClInclude Include="Input_form.h" />
     <ClInclude Include="MyForm.h">

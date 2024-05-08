@@ -1,102 +1,117 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Electro chain.vcxproj, Fact.vcxproj).  Это может привести к ошибкам очистки и перестроения.
   MyForm.cpp
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(120,24): warning C4101: voltage: неиспользованная локальная переменная
-  (компиляция исходного файла "MyForm.cpp")
-  
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(145,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(121,24): warning C4101: voltage: неиспользованная локальная переменная
   (компиляция исходного файла "MyForm.cpp")
   
 F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(146,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(202,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(147,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
 F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(203,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(299,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(204,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(300,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(306,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(391,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(307,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(392,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(405,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(455,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(406,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(456,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(476,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(39,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Elec.h(477,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(41,73): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(42,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(42,76): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(44,74): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(43,76): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(45,76): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(129,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(46,77): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(130,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(150,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(132,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(151,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(133,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(153,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(134,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(154,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(135,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(155,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(144,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(156,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(145,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(180,39): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(146,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(181,39): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(166,15): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(183,29): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(169,23): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(198,29): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(174,23): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(199,25): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(185,40): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(218,39): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(187,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(227,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(236,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(228,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(250,33): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(232,23): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(302,32): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(243,21): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
-F:\Study\GitHub\Calculation-of-electric-circuit-prop\MyForm.h(113,63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(253,23): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(262,40): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(264,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(270,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(284,33): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\Tree.h(336,32): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "MyForm.cpp")
+  
+F:\Study\GitHub\Calculation-of-electric-circuit-prop\MyForm.h(106,63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   (компиляция исходного файла "MyForm.cpp")
   
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка

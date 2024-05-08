@@ -42,19 +42,19 @@ public:
 		font_pen = gcnew SolidBrush(Color::Black);
 		draw_font = gcnew Font("Arial", 8);
 	}
-	String^ Get_Name()
+	String^ get_name()
 	{
 		return name;
 	}
-	virtual double Get_Res()
+	virtual double get_res()
 	{
 		return resistance;
 	}
-	virtual double Get_Vol()
+	virtual double get_vol()
 	{
 		return voltage;
 	}
-	virtual double Get_Cur()
+	virtual double get_cur()
 	{
 		return current;
 	}
@@ -69,26 +69,27 @@ public:
 	virtual void set_cur(double new_h)
 	{
 		current = new_h;
-		set_vol(new_h * Get_Res());
+		set_vol(new_h * get_res());
 
 	}
 	virtual bool get_work()
 	{
-		return isWork =((Get_Res() != 0 && Get_Cur() != 0))? true: false;
+		return isWork =((get_res() != 0 && get_cur() != 0))? true: false;
 
 	}
 	virtual void set_work(bool w)
 	{
 		isWork = w;
 	}
-	virtual String^ get_info()
+	virtual List<String^>^ get_info()
 	{
-		String^ name = "Имя: " + Get_Name() + "\n";
-		String^ res = "Сопротивление: " + Get_Res().ToString() + " Ом" + "\n";
-		String^ cur = "Сила тока: " + Get_Cur().ToString() + " A" + "\n";
-		String^ vol = "Напряжение : " + Get_Vol().ToString() + " В" + "\n";
-		String^ connect = "Подключен к сети :" + ((this->Get_Cur() != 0) ? " да" : " нет") + "\n";
-		return name + res + cur + vol + connect;
+		List<String^>^ info_list = gcnew List<String^>();
+		info_list->Add(this->get_name());
+		info_list->Add(this->get_res().ToString());
+		info_list->Add(this->get_cur().ToString());
+		info_list->Add(this->get_vol().ToString());
+		info_list->Add(((this->get_cur() != 0) ? "1" : "0"));
+		return info_list;
 	}
 	virtual void to_paint(Graphics^ g, Point^ point)
 	{
@@ -260,40 +261,46 @@ public:
 		}
 		
 	}
-	String^ get_info() override
+
+	List<String^>^ get_info() override
 	{
-		String^ name = "Имя: " + Get_Name() + "\n";
-		String^ res = "Сопротивление: " + Get_Res().ToString() + " Ом" + "\n";
-		String^ cur = "Сила тока: " + Get_Cur().ToString() + " A" + "\n";
-		String^ vol = "Напряжение : " + Get_Vol().ToString() + " В" + "\n";
-		String^ connect = "Подключен к сети :" + ((this->Get_Cur() != 0) ? " да" : " нет") + "\n";
-		String^ work = "Работает:" + ((this->get_work()) ? " да" : " нет") + "\n";
-		return name + res + cur + vol + connect + work;
+		List<String^>^ info_list = gcnew List<String^>();
+		info_list->Add(this->get_name());
+		info_list->Add(this->get_res().ToString());
+		info_list->Add(this->get_cur().ToString());
+		info_list->Add(this->get_vol().ToString());
+		info_list->Add(((this->get_cur() != 0) ? "1" : "0"));
+		info_list->Add(((this->get_work()) ? "1" : "0"));
+		return info_list;
 	}
+
 	bool get_work() override
 	{
-		isWork = !(Get_Res() == 0 || Get_Cur() == 0 || Get_Vol() == 0);
+		isWork = !(get_res() == 0 || get_cur() == 0 || get_vol() == 0);
 		return isWork;
-
 	}
+
 	void set_res(double h) override
 	{
 		resistance = h;
-		set_vol(h * Get_Cur());
+		set_vol(h * get_cur());
 		get_work();
 	}
+
 	void set_vol(double new_h) override
 	{
 		voltage = new_h;
 		get_work();
 	}
+
 	void set_cur(double new_h) override
 	{
 		current = new_h;
-		set_vol(new_h * Get_Res());
+		set_vol(new_h * get_res());
 		get_work();
 
 	}
+
 	void to_paint(Graphics^ g, Point^ point) override
 	{
 		float x = point->X; //начальная точка X
@@ -353,39 +360,46 @@ public:
 		}
 		
 	}
-	String^ get_info() override
+
+	List<String^>^ get_info() override
 	{
-		String^ name = "Имя: " + Get_Name() + "\n";
-		String^ res = "Сопротивление: " + Get_Res().ToString() + " Ом" + "\n";
-		String^ cur = "Сила тока: " + Get_Cur().ToString() + " A" + "\n";
-		String^ vol = "Напряжение : " + Get_Vol().ToString() + " В" + "\n";
-		String^ connect = "Подключен к сети :" + ((this->Get_Cur() != 0) ? " да" : " нет") + "\n";
-		String^ work = "Работает:" + ((this->get_work()) ? " да" : " нет") + "\n";
-		return name + res + cur + vol + connect + work;
+		List<String^>^ info_list = gcnew List<String^>();
+		info_list->Add(this->get_name());
+		info_list->Add(this->get_res().ToString());
+		info_list->Add(this->get_cur().ToString());
+		info_list->Add(this->get_vol().ToString());
+		info_list->Add(((this->get_cur() != 0) ? "1" : "0"));
+		info_list->Add(((this->get_work()) ? "1" : "0"));
+		return info_list;
 	}
+
 	bool get_work() override
 	{
-		isWork = !(Get_Res() == 0 || Get_Cur() == 0 || Get_Vol() == 0);
+		isWork = !(get_res() == 0 || get_cur() == 0 || get_vol() == 0);
 		return isWork;
 
 	}
+
 	void set_res(double h) override
 	{
 		resistance = h;
-		set_vol(h * Get_Cur());
+		set_vol(h * get_cur());
 		get_work();
 	}
+
 	void set_vol(double new_h) override
 	{
 		voltage = new_h;
 		get_work();
 	}
+
 	void set_cur(double new_h) override
 	{
 		current = new_h;
-		set_vol(new_h * Get_Res());
+		set_vol(new_h * get_res());
 		get_work();
 	}
+
 	void to_paint(Graphics^ g, Point^ point) override
 	{
 		float x = point->X; //начальная точка X
@@ -428,28 +442,35 @@ public:
 		key_count += 1;
  
 	}
+
 	bool get_work() override
 	{
 		return isWork;
 	}
+
 	void set_work(bool k) override
 	{
 		isWork = k;
 	}
+
 	void set_cur(double new_h) override
 	{
 		current = 0;
 	}
+
 	void set_res(double new_h) override
 	{
 		resistance = 0;
 	}
-	String^ get_info() override
+
+	List<String^>^ get_info() override
 	{
-		String^ name = "Имя: " + Get_Name() + "\n";
-		String^ work = "Замкнут:" + ((this->isWork) ? " да" : " нет") + "\n";
-		return name + work;
+		List<String^>^ info_list = gcnew List<String^>();
+		info_list->Add(this->get_name());
+		info_list->Add(((this->isWork) ? "1" : "0"));
+		return info_list;
 	}
+
 	void to_paint(Graphics^ g, Point^ point) override
 	{
 		float x = point->X; //начальная точка X

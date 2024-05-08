@@ -37,14 +37,29 @@ Class InputFormKey: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.CheckBox check_work : Public
+Class InputFormChoose: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :InputForm
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.RadioButton eds_check : Public
+    System.Windows.Forms.RadioButton resistor_check : Public
+    System.Windows.Forms.RadioButton edev_check : Public
+    System.Windows.Forms.RadioButton lamp_check : Public
+    System.Windows.Forms.RadioButton key_check : Public
+    System.Windows.Forms.Label eds_label : Public
+    System.Windows.Forms.Label resistor_label : Public
+    System.Windows.Forms.Label edev_label : Public
+    System.Windows.Forms.Label lamp_label : Public
+    System.Windows.Forms.Label key_label : Public
+    System.Windows.Forms.Panel radioButtonPanel : Public
 Class E_elem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Double, Double, Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    Get_Name(): PrivateScope, Public, HideBySig
-    Get_Res(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
-    Get_Vol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
-    Get_Cur(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_name(): PrivateScope, Public, HideBySig
+    get_res(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_vol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_cur(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
     set_res(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
     set_vol(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
     set_cur(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
@@ -110,7 +125,8 @@ Class Scheme_tree: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Drawing.Pen pen : Public, Static
     System.Drawing.Graphics g : Public, Static
     Scheme_tree root : Public, Static
-    System.Drawing.Pen arrow_pen : Public, Static
+    System.Drawing.Pen arrow_pen_inner : Public, Static
+    System.Drawing.Pen arrow_pen_outline : Public, Static
   Methods:
     set_node(Scheme_tree, E_elem): PrivateScope, Public, HideBySig
     get_parent(): PrivateScope, Public, HideBySig
@@ -121,19 +137,47 @@ Class Scheme_tree: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     get_point(): PrivateScope, Public, HideBySig
     get_count(): PrivateScope, Public, HideBySig
     get_height(): PrivateScope, Public, HideBySig
+    get_drawarrow(): PrivateScope, Public, HideBySig
     is_leaf(): PrivateScope, Public, HideBySig
     paint(): PrivateScope, Public, HideBySig
     set_g(Graphics): PrivateScope, Public, HideBySig
     paint_split(): PrivateScope, Public, HideBySig
-    draw_arrow(): PrivateScope, Public, HideBySig
-    all_paint(Graphics): PrivateScope, Public, HideBySig
-    all_paint_help(Scheme_tree, Single): PrivateScope, Public, HideBySig
-    list_nodes(Scheme_tree): PrivateScope, Public, HideBySig
-    list_leafs(Scheme_tree): PrivateScope, Public, HideBySig
+    draw_arrow(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    draw_arrow_help(): PrivateScope, Public, HideBySig
+    all_paint(Graphics, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    all_paint_help(Scheme_tree, Single, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     get_all_res(): PrivateScope, Public, HideBySig
     get_all_res_help(Scheme_tree, Single&): PrivateScope, Public, HideBySig
     parallel_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
     straight_connect(Scheme_tree, Single&): PrivateScope, Public, HideBySig
+    list_nodes(Scheme_tree): PrivateScope, Public, HideBySig
+    list_leafs(Scheme_tree): PrivateScope, Public, HideBySig
+Class ChangeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(E_elem ByRef): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox res_textbox : Public
+    System.Windows.Forms.TextBox cur_textbox : Public
+    System.Windows.Forms.TextBox vol_textbox : Public
+    System.Windows.Forms.CheckBox connect_checkbox : Public
+    System.Windows.Forms.CheckBox iswork_checkbox : Public
+    System.Windows.Forms.Label res1_label : Public
+    System.Windows.Forms.Label res2_label : Public
+    System.Windows.Forms.Label cur1_label : Public
+    System.Windows.Forms.Label cur2_label : Public
+    System.Windows.Forms.Label vol1_label : Public
+    System.Windows.Forms.Label vol2_label : Public
+    System.Windows.Forms.Label connect_label : Public
+    System.Windows.Forms.Label iswork_label : Public
+    System.Windows.Forms.Label name_label : Public
+    System.Windows.Forms.Button okButton : Public
+    System.Collections.Generic.List`1[System.String] info_list : Public
+    E_elem element : Public, Static
+  Methods:
+    change_param(E_elem&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ChangeFormEDS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ChangeForm
+    Void .ctor(E_elem): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Fact.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -143,3 +187,6 @@ Class Fact.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Collections.Generic.List`1[Scheme_tree] list_nodes : Public
     System.Collections.Generic.List`1[Scheme_tree] list_leafs : Public
     Boolean init_load : Public
+    Boolean scheme_completed : Public
+    Int32 current_element_ln : Public
+    Int32 current_element_lf : Public
